@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add User</title>
+  <link rel="stylesheet" href="{% static 'css/add_user.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add User Details</h1>
+
+        <div class="form-section">
+            <form method="POST" action="/add/" id="addUserForm">
+                {% csrf_token %}
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="Enter your location" required>
+
+                <button type="submit">Submit</button>
+
+                <div class="already-registered">
+                    <a href="/decrypt">Already Registered?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

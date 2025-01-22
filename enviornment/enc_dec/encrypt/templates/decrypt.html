@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decrypt User</title>
+    <link rel="stylesheet" href="{% static 'css/decrypt.css' %}">
+</head>
+<body>
+    <h1>Decrypt User Details</h1>
+
+    <div class="form-section">
+        <form method="POST" action="" id="decryptUserForm">
+            {% csrf_token %}
+            
+            <label for="code">Enter Code:</label>
+            <input type="text" id="code" name="code" placeholder="Enter unique code" required>
+
+            <button type="submit">Decrypt</button>
+        </form>
+
+        <!-- Not Registered? link -->
+        <div class="not-registered">
+            <a href="/add" class="not-registered-link">Not Registered?</a>
+        </div>
+    </div>
+
+    <!-- Display errors or decrypted data -->
+    {% if error %}
+        <div class="error-message">{{ error }}</div>
+    {% elif name %}
+        <div class="decrypted-data">
+            <h2>Decrypted Data:</h2>
+            <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Address:</strong> {{ address }}</p>
+            <p><strong>Location:</strong> {{ location }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>

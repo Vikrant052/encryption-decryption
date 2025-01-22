@@ -1,0 +1,104 @@
+/* General body and page styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+/* Form section */
+.form-section {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 400px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Error message styles */
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid red;
+  background-color: #fdd;
+  border-radius: 5px;
+}
+
+/* Decrypted data section styles */
+.decrypted-data {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e7f7e1;
+  border-radius: 8px;
+  border: 1px solid #4CAF50;
+}
+
+.decrypted-data h2 {
+  color: #333;
+}
+
+.decrypted-data p {
+  font-size: 16px;
+  color: #555;
+}
+
+.decrypted-data strong {
+  color: #000;
+}
+
+/* Not Registered? link styles */
+.not-registered {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.not-registered a {
+  color: #4CAF50;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.not-registered a:hover {
+  color:  #4CAF50;
+  text-decoration: underline;
+}

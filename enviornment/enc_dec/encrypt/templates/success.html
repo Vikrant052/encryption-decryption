@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Success</title>
+  <link rel="stylesheet" href="{% static 'css/success.css' %}">
+</head>
+<body>
+  <div>
+    <h3>Registered Successfully! The login code <span id="code">{{ code }}</span> has been sent to you via Email.</h3>
+  
+
+    <!-- Button to go to the decrypt user template -->
+    <a href="{% url 'decrypt_details' %}" class="btn-link">
+      <button>Go to Decrypt Page</button>
+    </a>
+
+</body>
+</html>
